@@ -1,6 +1,8 @@
 const mongoose=require('mongoose');
+require('dotenv').config()
+
 mongoose.set('strictQuery', false);
-mongoose.connect('mongodb+srv://prasathkarthiban1999:8Af5SsjH9FmzMAea@noteextension.yqbdegh.mongodb.net/?retryWrites=true&w=majority').then(()=>{
+mongoose.connect(process.env.MONGO_URL).then(()=>{
     console.log("connection successfull...");
 });
 
