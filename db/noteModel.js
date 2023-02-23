@@ -8,10 +8,11 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
 
 const schema=mongoose.Schema({
     id:{
-        type:Number
+        type:String
     },
     note:{
         type:String,
+        default:"Empty"
     },
     createdAt:{
         type:Date,
